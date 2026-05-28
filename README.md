@@ -1,4 +1,4 @@
-# 🏢 企业智能顾问 RAG 系统
+# 🏢 AI 人设剧情生成器
 
 <div align="center">
   <img src="https://img.shields.io/badge/Python-3.10+-blue.svg" alt="Python Version">
@@ -8,7 +8,7 @@
 
 <br>
 
-一款基于 RAG（检索增强生成）的企业智能顾问系统，支持上传 PDF/Word/TXT 外部文件或企业内部文档构建知识库，结合通义千问大模型实现精准的企业问题问答，同时支持多会话管理、对话历史持久化。
+一个基于大模型的 AI 工具，支持角色人设创建、剧情大纲生成、多章节内容自动续写。
 
 ## ✨ 项目简介
 这是一个 Streamlit 应用，你可以：

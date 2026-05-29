@@ -80,29 +80,35 @@ cd RAG-Langchain
 pip install -r requirements.txt 
 ```
 ### 4. 项目运行
-#### 启动文件上传界面（构建知识库）
-上传相关文档（PDF/Word/TXT），系统自动解析并入库
-单次只能上传一份文件，若有多份文件需上传，请上传多次。
+#### 启动主界面
+在命令行中输入
 ```bash
-streamlit run app_file_uploader.py
+streamlit run app.py
 ```
-![文件上传到数据库](images/上传文件到数据库.jpg)
+#### 输入文字描述或上传图片生成人设
+![人设](images/人设.png)
 
-#### 启动问答界面
-```bash
-streamlit run app_qa.py
-```
-![智能顾问运行示例](images/智能顾问运行示例.jpg)
+#### 生成开场白
+![开场白](images/开场白.png)
+
+#### 生成剧情
+![剧情](images/剧情.png)
 
 ## 📁 项目结构
 ```
 Character_Agent/
-├── app.py               # 主界面入口
-├── functions.py         # 核心功能函数
-├── prompts.py           # 大模型提示词模板
-├── requirements.txt     # 依赖列表
-├── .gitignore           # Git忽略配置
-└── LICENSE              # 开源协议
+├── images/                  # 项目运行截图及素材文件夹
+│   ├── .gitkeep             # 保持空文件夹存在的占位文件
+│   ├── 人设.png             # 人设生成界面截图
+│   ├── 剧情.png             # 剧情大纲生成界面截图
+│   └── 开场白.png           # 开场白生成界面截图
+├── .gitignore               # Git 忽略文件配置
+├── LICENSE                  # 项目开源许可证 (MIT)
+├── README.md                # 项目说明文档
+├── app.py                   # Streamlit 主程序入口
+├── functions.py             # 核心业务逻辑与辅助函数
+├── prompts.py               # 大模型 Prompt 提示词模板总仓
+└── requirements.txt         # 项目依赖库清单
 ```
 ## 🧩 核心流程
 1. 文字描述或上传图片 
@@ -110,3 +116,4 @@ Character_Agent/
 
 ## ⚠️ 注意事项
 1. 确保 API 密钥配置后重启终端 / IDE，否则项目无法读取环境变量。  
+2. 若生成内容缺失，可能是触发风控，建议重新生成。
